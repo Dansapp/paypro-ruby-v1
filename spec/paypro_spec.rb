@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe PayPro do
+describe PayProOld do
   it 'returns the correct api url' do
     expect(described_class::API_URL).to eql 'https://www.paypro.nl/post_api'
   end

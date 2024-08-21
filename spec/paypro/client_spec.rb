@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe PayPro::Client do
+describe PayProOld::Client do
   let(:api_key) { 'a16e84b3ef5a80ef9af289d37788e87e' }
   let(:client) { described_class.new(api_key) }
 
@@ -49,8 +49,8 @@ describe PayPro::Client do
 
       before { allow(conn).to receive(:post).and_raise(Faraday::ClientError, 'Message') }
 
-      it 'raises a PayPro::Connection error' do
-        expect { subject }.to raise_error(PayPro::ConnectionError, kind_of(String))
+      it 'raises a PayProOld::Connection error' do
+        expect { subject }.to raise_error(PayProOld::ConnectionError, kind_of(String))
       end
     end
 
@@ -61,9 +61,9 @@ describe PayPro::Client do
         end
       end
 
-      it 'raises a PayPro::InvalidResponse error' do
+      it 'raises a PayProOld::InvalidResponse error' do
         expect { subject }.to raise_error(
-          PayPro::InvalidResponseError,
+          PayProOld::InvalidResponseError,
           'The API request returned an error or is invalid: invalid json }'
         )
       end
@@ -76,9 +76,9 @@ describe PayPro::Client do
         end
       end
 
-      it 'raises a PayPro::InvalidResponse error' do
+      it 'raises a PayProOld::InvalidResponse error' do
         expect { subject }.to raise_error(
-          PayPro::InvalidResponseError,
+          PayProOld::InvalidResponseError,
           'The API request returned an error or is invalid: Invalid amount'
         )
       end
