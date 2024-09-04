@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PayPro
+module PayProOld
   class ConnectionError < StandardError; end
 
   class InvalidResponseError < StandardError; end

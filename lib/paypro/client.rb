@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module PayPro
-  # Client class to connect to the PayPro V1 API.
+module PayProOld
+  # Client class to connect to the PayProOld V1 API.
   # Requires an API key to authenticate API calls, you
   # can also supply your own Faraday connection instead of the default one.
   # This can be useful if you want to add more middleware or want finer
@@ -23,7 +23,7 @@ module PayPro
       end
       handle_response(response)
     rescue Faraday::ClientError => e
-      raise ConnectionError, "Could not connect to the PayPro API: #{e.inspect}"
+      raise ConnectionError, "Could not connect to the PayProOld API: #{e.inspect}"
     end
 
     # Returns the body that is used in the POST request.
@@ -38,7 +38,7 @@ module PayPro
     private
 
     def ca_bundle_file
-      PayPro::CA_BUNDLE_FILE
+      PayProOld::CA_BUNDLE_FILE
     end
 
     def cert_store
@@ -49,7 +49,7 @@ module PayPro
 
     def default_conn
       Faraday.new(
-        PayPro::API_URL,
+        PayProOld::API_URL,
         ssl: {
           cert_store: cert_store,
           verify: true

@@ -4,7 +4,7 @@ require File.expand_path('lib/paypro/version', __dir__)
 
 Gem::Specification.new do |s|
   s.name = 'paypro-old'
-  s.version = PayPro::VERSION
+  s.version = PayProOld::VERSION
   s.license = 'MIT'
   s.homepage = 'https://github.com/paypronl/paypro-ruby-v1'
   s.author = 'PayPro'
