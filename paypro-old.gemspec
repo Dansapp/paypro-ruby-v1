@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.expand_path('lib/paypro/version', __dir__)
+require File.expand_path('lib/paypro_old/version', __dir__)
 
 Gem::Specification.new do |s|
   s.name = 'paypro-old'
