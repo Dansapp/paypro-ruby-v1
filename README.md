@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/paypro.svg)](https://badge.fury.io/rb/paypro)
 [![circleci](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://circleci.com/gh/paypronl/paypro-ruby-v1)
 
-This library provides a Ruby client to connect with the PayProOld API.
+This library provides a Forked Ruby client to connect with the PayProOld API. It is renamed to `PayProOld` so it makes it easier to use the new API of PayPro which has the same name.
 
 ## Requirements
 
@@ -15,7 +15,7 @@ This library provides a Ruby client to connect with the PayProOld API.
 Installation is pretty standard:
 
 ```sh
-$ gem install paypro
+$ gem install paypro-old
 ```
 
 if you'd rather install the PayProOld client using `bundler` you can put this in your Gemfile:
@@ -23,13 +23,13 @@ if you'd rather install the PayProOld client using `bundler` you can put this in
 ```ruby
 source 'https://rubygems.org'
 
-gem 'paypro'
+gem 'paypro-old'
 ```
 
 Or directly from the GitHub repository:
 
 ```ruby
-gem 'paypro', git: 'https://github.com/paypronl/paypro-ruby-v1'
+gem 'paypro-old', git: 'https://github.com/Dansapp/paypro-ruby-v1.git'
 ```
 
 ## Getting started
@@ -37,7 +37,7 @@ gem 'paypro', git: 'https://github.com/paypronl/paypro-ruby-v1'
 Example of creating a payment:
 
 ```ruby
-require 'paypro'
+require 'paypro-old'
 
 client = PayProOld::Client.new('YOUR_API_KEY')
 client.command = 'create_payment';

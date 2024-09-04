@@ -5,9 +5,9 @@ require 'json'
 
 require 'faraday'
 
-require 'paypro/client'
-require 'paypro/errors'
-require 'paypro/version'
+require 'paypro_old/client'
+require 'paypro_old/errors'
+require 'paypro_old/version'
 
 module PayProOld
   CA_BUNDLE_FILE = "#{File.dirname(__FILE__)}/data/ca-bundle.crt"
